@@ -3,7 +3,7 @@ window.QUIZ_CARDS = [
     "id": "p001_i002_q001",
     "page": 1,
     "question_number": 1,
-    "question_text": "1. 접수면접에서 반드시 평가되어야 할 내용o 설명하시오. (5점)\n# 임상적 면접(또는 초기면담보고서)의 서면보고서에 포함되어야 할 내용 5가지를 쓰시으\n# 합심리 평가보고서 작성 시 양식에 들어가야 할 내용 5가지를 적으시오.",
+    "question_text": "1. 접수면접에서 반드시 평가되어야 할 내용o 설명하시오. (5점)",
     "question_image": "assets/questions/p001_i002_q001.png",
     "answer_image": "assets/answers/p001_i002_q001.png"
   },
@@ -11,7 +11,7 @@ window.QUIZ_CARDS = [
     "id": "p001_i003_q002",
     "page": 1,
     "question_number": 2,
-    "question_text": "2. 초기면담 과정에 포함되어야 할 내담자에 대한 행동관살의 요소 4-7가지를 쓰시오. (5점)\n# 아동을 대상으로 한 초기면접 평가보고서 내용에서 구체적으로 관찰해야 할 사항 5가지를 쓰시오.",
+    "question_text": "2. 초기면담 과정에 포함되어야 할 내담자에 대한 행동관살의 요소 4-7가지를 쓰시오. (5점)",
     "question_image": "assets/questions/p001_i003_q002.png",
     "answer_image": "assets/answers/p001_i003_q002.png"
   },
@@ -35,7 +35,7 @@ window.QUIZ_CARDS = [
     "id": "p002_i002_q005",
     "page": 2,
     "question_number": 5,
-    "question_text": "5. (청소년 상담 포함) 일반적인 상담의 종결 과정에서 다루어야 할 사항을 5가지를 기술하시외 (5점) 습습습\n# 종결단계에서 우선 지난 상담내용에 대한 점검이 이루어짐. 상담자와 내담자가 지난 과정을 돌아보면",
+    "question_text": "5. (청소년 상담 포함) 일반적인 상담의 종결 과정에서 다루어야 할 사항을 5가지를 기술하시외 (5점) 습습습",
     "question_image": "assets/questions/p002_i002_q005.png",
     "answer_image": "assets/answers/p002_i002_q005.png"
   },
@@ -51,7 +51,7 @@ window.QUIZ_CARDS = [
     "id": "p003_i001_q007",
     "page": 3,
     "question_number": 7,
-    "question_text": "7. 상담자가 내담자와의 관계에 대해 일고 있어야 할 윤리문제 기본원직과. 행동지침을 5가지 서술하시\n오. (5점)\n# 상담사나 임상치료사가 가져야 할 전문가로서의 윤리 원칙을 5가지 쓰시외\n# 일반적 윤리치짐",
+    "question_text": "7. 상담자가 내담자와의 관계에 대해 일고 있어야 할 윤리문제 기본원직과. 행동지침을 5가지 서술하시\n오. (5점)",
     "question_image": "assets/questions/p003_i001_q007.png",
     "answer_image": "assets/answers/p003_i001_q007.png"
   },
@@ -59,7 +59,7 @@ window.QUIZ_CARDS = [
     "id": "p004_i001_q009",
     "page": 4,
     "question_number": 9,
-    "question_text": "9. 윤리기준에서 이중관계(다중관계) 의미와 피해야 하는 이유를 구체적으로 예를 들어 설명하시오. (5\n점) 습습습\n# 심리상담자가 준수하여야 할 윤리 의무 중 '이중관계 지양에 대해 설명하시외",
+    "question_text": "9. 윤리기준에서 이중관계(다중관계) 의미와 피해야 하는 이유를 구체적으로 예를 들어 설명하시오. (5\n점) 습습습",
     "question_image": "assets/questions/p004_i001_q009.png",
     "answer_image": "assets/answers/p004_i001_q009.png"
   },
@@ -83,7 +83,7 @@ window.QUIZ_CARDS = [
     "id": "p004_i007_q012",
     "page": 4,
     "question_number": 12,
-    "question_text": "12. 다음 사례에서 연구 절차상 문제점을 4가지만 쓰고. 각 문제점에 대해 대안을 제시하시오. (6점)",
+    "question_text": "12. 다음 사례에서 연구 절차상 문제점을 4가지만 쓰고. 각 문제점에 대해 대안을 제시하시오. (6점)\n“한 임상심리학자가 자신이 새로 개발한 사회공포증 치료기법이 효과가 있는지 검증하기 위해 사회공포증이 의",
     "question_image": "assets/questions/p004_i007_q012.png",
     "answer_image": "assets/answers/p004_i007_q012.png"
   },
@@ -139,7 +139,7 @@ window.QUIZ_CARDS = [
     "id": "p006_i003_q019",
     "page": 6,
     "question_number": 19,
-    "question_text": "19. 집단치료의 치료적 요인 5가지 기술하시오. (5점) *습습습습\n# 알통이 제시한 집단지료의 지료요인 6가지를 서술하시오. (5점)",
+    "question_text": "19. 집단치료의 치료적 요인 5가지 기술하시오. (5점) *습습습습",
     "question_image": "assets/questions/p006_i003_q019.png",
     "answer_image": "assets/answers/p006_i003_q019.png"
   },
@@ -155,7 +155,7 @@ window.QUIZ_CARDS = [
     "id": "p007_i001_q021",
     "page": 7,
     "question_number": 21,
-    "question_text": "21. 집단상담의 장점 및 제한점 3가지씩 쓰시오. (5점)",
+    "question_text": "21. 집단상담의 장점 및 제한점 3가지씩 쓰시오. (5점)\n제한점",
     "question_image": "assets/questions/p007_i001_q021.png",
     "answer_image": "assets/answers/p007_i001_q021.png"
   },
@@ -171,7 +171,7 @@ window.QUIZ_CARDS = [
     "id": "p007_i003_q023",
     "page": 7,
     "question_number": 23,
-    "question_text": "23. 집단 구성시 동질적인 집단이 가지는 장점을 3가지 쓰시오. (6점) ***",
+    "question_text": "23. 집단 구성시 동질적인 집단이 가지는 장점을 3가지 쓰시오. (6점) ***\n동질적인 집단 장점",
     "question_image": "assets/questions/p007_i003_q023.png",
     "answer_image": "assets/answers/p007_i003_q023.png"
   },
@@ -243,7 +243,7 @@ window.QUIZ_CARDS = [
     "id": "p009_i002_q032",
     "page": 9,
     "question_number": 32,
-    "question_text": "32. 다음 보기에 내담자의 말에 상담자로서 공감적 반응. 반영적 반응을 쓰시오. (5점)",
+    "question_text": "32. 다음 보기에 내담자의 말에 상담자로서 공감적 반응. 반영적 반응을 쓰시오. (5점)\n내담자 : •일을 수가 없어요 남편이 매일 저녁식사 시간에 맞추어서 귀가하기로 지난주에 여기서 약속했었召아요? 이번",
     "question_image": "assets/questions/p009_i002_q032.png",
     "answer_image": "assets/answers/p009_i002_q032.png"
   },
@@ -267,7 +267,7 @@ window.QUIZ_CARDS = [
     "id": "p010_i002_q035",
     "page": 10,
     "question_number": 35,
-    "question_text": "35. 내담자의 반응을 해석할 때의 주의사항을 5가지 쓰시오. (5점) *습습습",
+    "question_text": "35. 내담자의 반응을 해석할 때의 주의사항을 5가지 쓰시오. (5점) *습습습\n주의사항",
     "question_image": "assets/questions/p010_i002_q035.png",
     "answer_image": "assets/answers/p010_i002_q035.png"
   },
@@ -275,7 +275,7 @@ window.QUIZ_CARDS = [
     "id": "p010_i003_q036",
     "page": 10,
     "question_number": 36,
-    "question_text": "36. 상담장면에서 •생산적인 경청을 하는 상담자가 보이는 구체적인 태도를 5가지 쓰시오. (5점)\n# 상담장면에서 경청하고 배려하고 있다는 것 알게하는 방법 3가지",
+    "question_text": "36. 상담장면에서 •생산적인 경청을 하는 상담자가 보이는 구체적인 태도를 5가지 쓰시오. (5점)",
     "question_image": "assets/questions/p010_i003_q036.png",
     "answer_image": "assets/answers/p010_i003_q036.png"
   },
@@ -299,7 +299,7 @@ window.QUIZ_CARDS = [
     "id": "p011_i002_q038",
     "page": 11,
     "question_number": 38,
-    "question_text": "38. 다음 보기는 슈퍼비전의 기능에 대한 설명이다. 괄호 안에 들어갈 슈퍼비전의 기능을 쓰시오 (4점) 습습습\n# 카두신이 제시한 슈퍼비전의 3가지 기능",
+    "question_text": "38. 다음 보기는 슈퍼비전의 기능에 대한 설명이다. 괄호 안에 들어갈 슈퍼비전의 기능을 쓰시오 (4점) 습습습",
     "question_image": "assets/questions/p011_i002_q038.png",
     "answer_image": "assets/answers/p011_i002_q038.png"
   },
@@ -331,7 +331,7 @@ window.QUIZ_CARDS = [
     "id": "p012_i002_q041",
     "page": 12,
     "question_number": 41,
-    "question_text": "41. 임상심리학자의 수련과 관련하여 과학자•전문가 모일의 의미를 설명하시오. (5점)",
+    "question_text": "41. 임상심리학자의 수련과 관련하여 과학자•전문가 모일의 의미를 설명하시오. (5점)\n과학자-전문가 모일은 임상심리학자가 과학자로서 인간 행동을 이해하기위해 골임없이 연구하고. 그",
     "question_image": "assets/questions/p012_i002_q041.png",
     "answer_image": "assets/answers/p012_i002_q041.png"
   },
@@ -379,7 +379,7 @@ window.QUIZ_CARDS = [
     "id": "p013_i001_q047",
     "page": 13,
     "question_number": 47,
-    "question_text": "47. 재활모형에서 기본이 되는 병리. 손상. 장에, 핸디,탭의 의미를 쓰고 개입 방법상의 사이를 설명하시\n오. (5점) 습습\n# 재활모형은 •손상. 장에, 현디,탭• 3단계로 구분 •장에'의 정의를 쓰고 그 개입 방법에 대해 예를 들어",
+    "question_text": "47. 재활모형에서 기본이 되는 병리. 손상. 장에, 핸디,탭의 의미를 쓰고 개입 방법상의 사이를 설명하시\n오. (5점) 습습",
     "question_image": "assets/questions/p013_i001_q047.png",
     "answer_image": "assets/answers/p013_i001_q047.png"
   },
@@ -395,7 +395,7 @@ window.QUIZ_CARDS = [
     "id": "p013_i003_q049",
     "page": 13,
     "question_number": 49,
-    "question_text": "49. 직업재활을 해야 하는 이유 3가지를 쓰시오. (6점) **\n# 만성 정신질환자를 위한 정신사회재활의 일반적인 목표를 3가지 쓰시오.",
+    "question_text": "49. 직업재활을 해야 하는 이유 3가지를 쓰시오. (6점) **",
     "question_image": "assets/questions/p013_i003_q049.png",
     "answer_image": "assets/answers/p013_i003_q049.png"
   },
@@ -403,7 +403,7 @@ window.QUIZ_CARDS = [
     "id": "p014_i001_q050",
     "page": 14,
     "question_number": 50,
-    "question_text": "50. 정신사회재활의 기본원리 6가지를 쓰시오. (6점)\n# 만성 정신질환자에 대한 재활개입 방법에 대해 3가지를 쓰고. 각각에 대해 설명하시오 (6점)\n# 정신사회재활에서 환자를 대상으로 한 치료적 개입에 포함되는 구성요소 4가지 쓰시오.\n# 정신사회재활을 계획하고 개입할 때 기본 구성요소 5가지 쓰시오\n# 정신질환자에 대한 재활 프로그램 구성 원칙 5가지",
+    "question_text": "50. 정신사회재활의 기본원리 6가지를 쓰시오. (6점)",
     "question_image": "assets/questions/p014_i001_q050.png",
     "answer_image": "assets/answers/p014_i001_q050.png"
   },
@@ -411,7 +411,7 @@ window.QUIZ_CARDS = [
     "id": "p014_i002_q051",
     "page": 14,
     "question_number": 51,
-    "question_text": "51. 정신사회재활에서 재활계획을 위한 4단계를 쓰시오.(4점) **\n# 정신사회재활•에서 재활계획을 위한 재활모형 4단계 모형을 설명하시오.\n# 재활프로그램 단계를 위한 4단계를 쓰시오.",
+    "question_text": "51. 정신사회재활에서 재활계획을 위한 4단계를 쓰시오.(4점) **",
     "question_image": "assets/questions/p014_i002_q051.png",
     "answer_image": "assets/answers/p014_i002_q051.png"
   },
@@ -419,7 +419,7 @@ window.QUIZ_CARDS = [
     "id": "p015_i001_q052",
     "page": 15,
     "question_number": 52,
-    "question_text": "52. 재활치료를 받고 있는 정신과 환자의 교육 방법 중 2가지를 쓰고 설명하시오. (4점) 습습",
+    "question_text": "52. 재활치료를 받고 있는 정신과 환자의 교육 방법 중 2가지를 쓰고 설명하시오. (4점) 습습\n증상관리 교육 문제 증상이 일상생활에 미지는 영향. 증상을 최소화하는 방법 등 스스로 증상을 관리할 수 있도록 교육한다",
     "question_image": "assets/questions/p015_i001_q052.png",
     "answer_image": "assets/answers/p015_i001_q052.png"
   },
@@ -427,7 +427,7 @@ window.QUIZ_CARDS = [
     "id": "p015_i002_q053",
     "page": 15,
     "question_number": 53,
-    "question_text": "53. 만성 정신과 환자의 치료 및 재활을 위한 가족의 태도로서 긍정. 부정 각각 3가지 (10점)",
+    "question_text": "53. 만성 정신과 환자의 치료 및 재활을 위한 가족의 태도로서 긍정. 부정 각각 3가지 (10점)\n궁정",
     "question_image": "assets/questions/p015_i002_q053.png",
     "answer_image": "assets/answers/p015_i002_q053.png"
   },
@@ -531,7 +531,7 @@ window.QUIZ_CARDS = [
     "id": "p017_i004_q065",
     "page": 17,
     "question_number": 65,
-    "question_text": "65. 토큰경제에서 강화는 학습이른의 어떤 원리를 근거로 한 것인지 쓰시오. (3점) 습습습습",
+    "question_text": "65. 토큰경제에서 강화는 학습이른의 어떤 원리를 근거로 한 것인지 쓰시오. (3점) 습습습습\n토큰경제는 학습이른의 조작적 조건형성의 원리에 근거한 것으로, 바람직한 행동의 목표를 정해 놓고",
     "question_image": "assets/questions/p017_i004_q065.png",
     "answer_image": "assets/answers/p017_i004_q065.png"
   },
@@ -555,7 +555,7 @@ window.QUIZ_CARDS = [
     "id": "p018_i003_q068",
     "page": 18,
     "question_number": 68,
-    "question_text": "68. 오염에 대한 반복적인 손 씻기 환자의 주요 증상을 토대로 한 진단명. 치료기법 및 효과적인 치료과\n정 4단계 쓰시오. (8정)\n# 강박장에의 노출 및 반용방지법(ERP)의 원리와 기본 시행순서를 기술하시오. (6정)",
+    "question_text": "68. 오염에 대한 반복적인 손 씻기 환자의 주요 증상을 토대로 한 진단명. 치료기법 및 효과적인 치료과\n정 4단계 쓰시오. (8정)",
     "question_image": "assets/questions/p018_i003_q068.png",
     "answer_image": "assets/answers/p018_i003_q068.png"
   },
@@ -563,7 +563,7 @@ window.QUIZ_CARDS = [
     "id": "p019_i001_q069",
     "page": 19,
     "question_number": 69,
-    "question_text": "69. 점진적 노출의 치료적 효과 3가지를 쓰시오. (6점)\n# 행동치료의 노출지료법을 통해 환자가 가지게 되는 인지적 측면의 치료효과를 3가지 쓰시오.",
+    "question_text": "69. 점진적 노출의 치료적 효과 3가지를 쓰시오. (6점)",
     "question_image": "assets/questions/p019_i001_q069.png",
     "answer_image": "assets/answers/p019_i001_q069.png"
   },
@@ -643,7 +643,7 @@ window.QUIZ_CARDS = [
     "id": "p021_i001_q079",
     "page": 21,
     "question_number": 79,
-    "question_text": "79. 보기의 A군의 행동에 대해 ABC모텔을 적용하여 치료에 참여시기는 방법에 대해 기술하시외 (6점)",
+    "question_text": "79. 보기의 A군의 행동에 대해 ABC모텔을 적용하여 치료에 참여시기는 방법에 대해 기술하시외 (6점)\n올해 중학교 1학년인 A군은 어머니와 함께 상담치료소를 방문하였다. A군은 어머니가 자신을 못살게 군다고",
     "question_image": "assets/questions/p021_i001_q079.png",
     "answer_image": "assets/answers/p021_i001_q079.png"
   },
@@ -683,7 +683,7 @@ window.QUIZ_CARDS = [
     "id": "p023_i003_q085",
     "page": 23,
     "question_number": 85,
-    "question_text": "85. 소크라테스 대화법의 특징 3가지와 구체적인 질문 예시 2가지를 쓰시오. (5점)",
+    "question_text": "85. 소크라테스 대화법의 특징 3가지와 구체적인 질문 예시 2가지를 쓰시오. (5점)\n「1",
     "question_image": "assets/questions/p023_i003_q085.png",
     "answer_image": "assets/answers/p023_i003_q085.png"
   },
@@ -739,7 +739,7 @@ window.QUIZ_CARDS = [
     "id": "p025_i003_q094",
     "page": 25,
     "question_number": 94,
-    "question_text": "94. 가족을 하나의 유기치로 보는 Becvar와 Becvar의 가족체계 기본전제를 3가지 쓰시오. (6점)\n# 체계론적 가족치료 이른 2자 사이버네틱스 이본의 기본전제를 3가지",
+    "question_text": "94. 가족을 하나의 유기치로 보는 Becvar와 Becvar의 가족체계 기본전제를 3가지 쓰시오. (6점)",
     "question_image": "assets/questions/p025_i003_q094.png",
     "answer_image": "assets/answers/p025_i003_q094.png"
   },
@@ -747,7 +747,7 @@ window.QUIZ_CARDS = [
     "id": "p025_i010_q096",
     "page": 25,
     "question_number": 96,
-    "question_text": "96. 다음에서 셜명하고 있는 가족치료 이본은 무엇인지 쓰시오. (3점)",
+    "question_text": "96. 다음에서 셜명하고 있는 가족치료 이본은 무엇인지 쓰시오. (3점)\n1) 해일리가 제안한 가족지료 모일. 2) 인간행동의 원인보다는 해결방법에 초점.",
     "question_image": "assets/questions/p025_i010_q096.png",
     "answer_image": "assets/answers/p025_i010_q096.png"
   },
@@ -755,7 +755,7 @@ window.QUIZ_CARDS = [
     "id": "p026_i001_q097",
     "page": 26,
     "question_number": 97,
-    "question_text": "97. 통해 제시한 의사소통 유형 5가지를 쓰시오. (5정) *습습습\n# 사터어의 경험적 가족지료모일의 의사소통 유형. ( )에 들어갈 각각의 의사소통 유형을 쓰시오",
+    "question_text": "97. 통해 제시한 의사소통 유형 5가지를 쓰시오. (5정) *습습습",
     "question_image": "assets/questions/p026_i001_q097.png",
     "answer_image": "assets/answers/p026_i001_q097.png"
   },
@@ -779,7 +779,7 @@ window.QUIZ_CARDS = [
     "id": "p026_i004_q100",
     "page": 26,
     "question_number": 100,
-    "question_text": "100. 아동상담에서 놀이의 치료적 기능 3가지를 셜명하시오. (6점)\n# 아동상당에서 놀이의 치료적 가치 5가지를 셜명하시오. (6정)",
+    "question_text": "100. 아동상담에서 놀이의 치료적 기능 3가지를 셜명하시오. (6점)",
     "question_image": "assets/questions/p026_i004_q100.png",
     "answer_image": "assets/answers/p026_i004_q100.png"
   },
@@ -787,7 +787,7 @@ window.QUIZ_CARDS = [
     "id": "p027_i001_q101",
     "page": 27,
     "question_number": 101,
-    "question_text": "101. 아동심리치료에 있어서 성인과 자별되는 아동의 특성을 5가지 쓰시오. (6점) *습\n# 아동심리지료에 있어서 고려해야 할 아동의 특성 3가지",
+    "question_text": "101. 아동심리치료에 있어서 성인과 자별되는 아동의 특성을 5가지 쓰시오. (6점) *습",
     "question_image": "assets/questions/p027_i001_q101.png",
     "answer_image": "assets/answers/p027_i001_q101.png"
   },
@@ -803,7 +803,7 @@ window.QUIZ_CARDS = [
     "id": "p027_i003_q103",
     "page": 27,
     "question_number": 103,
-    "question_text": "103. KPIC KPRC관련 적도 중에서 내적. 외적 스트레스를 측정하는 적도가 무엇인지 쓰시오. (4점)",
+    "question_text": "103. KPIC KPRC관련 적도 중에서 내적. 외적 스트레스를 측정하는 적도가 무엇인지 쓰시오. (4점)\n여러 가지 심리문제에 대한 아동의 대저능력 적응참재력을 평가하기 위한 것으로. 내적.외적 스트레스에 융통성",
     "question_image": "assets/questions/p027_i003_q103.png",
     "answer_image": "assets/answers/p027_i003_q103.png"
   },
@@ -835,7 +835,7 @@ window.QUIZ_CARDS = [
     "id": "p028_i002_q107",
     "page": 28,
     "question_number": 107,
-    "question_text": "107. 보기에서와 같이 자살 위험성이 높은 내담자에게 할 수 있는 조치방법을 3가지 기술하시오. **\n# 상담자는 내담자가 스스로 자살할 계획을 가지고 있음을 알게되었다. 그에 대한 대서방법을 3가지\n쓰시오.",
+    "question_text": "107. 보기에서와 같이 자살 위험성이 높은 내담자에게 할 수 있는 조치방법을 3가지 기술하시오. **",
     "question_image": "assets/questions/p028_i002_q107.png",
     "answer_image": "assets/answers/p028_i002_q107.png"
   },
@@ -851,7 +851,7 @@ window.QUIZ_CARDS = [
     "id": "p028_i004_q109",
     "page": 28,
     "question_number": 109,
-    "question_text": "109. 다음 보기의 사례를 읽고 물음에 답하시오. (10점)",
+    "question_text": "109. 다음 보기의 사례를 읽고 물음에 답하시오. (10점)\n서울시 마포구의 초등학교 5학년 학생인 김모 양은 평소 또래 진구들과 어울리지 못하고 집단따들렁을 당하던 중",
     "question_image": "assets/questions/p028_i004_q109.png",
     "answer_image": "assets/answers/p028_i004_q109.png"
   },
@@ -867,7 +867,7 @@ window.QUIZ_CARDS = [
     "id": "p029_i002_q111",
     "page": 29,
     "question_number": 111,
-    "question_text": "111. 최근 인터넷중독 사회적 관심 대두, 인터넷 중독에서 벗어날 수 있도록 (일반적)추전하는 방법 4가\n지를 쓰시오. (4점) 습습습습\n# 청소년 내담자로 하여금 인터넷 중독+에서 벗어나는 방법 4가지를 쓰시오. (4점) *게임, 스마트폰",
+    "question_text": "111. 최근 인터넷중독 사회적 관심 대두, 인터넷 중독에서 벗어날 수 있도록 (일반적)추전하는 방법 4가\n지를 쓰시오. (4점) 습습습습",
     "question_image": "assets/questions/p029_i002_q111.png",
     "answer_image": "assets/answers/p029_i002_q111.png"
   },
@@ -963,7 +963,7 @@ window.QUIZ_CARDS = [
     "id": "p032_i004_q122",
     "page": 32,
     "question_number": 122,
-    "question_text": "122. (틴를리와 불하들리의) 심리검사 결과 해석 설명 순서 올바르게 나열하시오살계별 지문제시) (2점)",
+    "question_text": "122. (틴를리와 불하들리의) 심리검사 결과 해석 설명 순서 올바르게 나열하시오살계별 지문제시) (2점)\n㉢ 검사자가 결과의 의미를 숙고하는 해석준비 단계 “ ㉡ 내담자가 해석을 받아들일 준비가 되었는지 확인 “",
     "question_image": "assets/questions/p032_i004_q122.png",
     "answer_image": "assets/answers/p032_i004_q122.png"
   },
@@ -1003,7 +1003,7 @@ window.QUIZ_CARDS = [
     "id": "p033_i004_q128",
     "page": 33,
     "question_number": 128,
-    "question_text": "128. 투사검사(기법)의 장점과 단점을 3가지씩 쓰시오. (6점) *습습*\n# MMPI, BDI 등 자기보고형 객관적 검사의 장점과 단점을 각각 3가지 쓰시오. (6점) ,BDI . 아본백의",
+    "question_text": "128. 투사검사(기법)의 장점과 단점을 3가지씩 쓰시오. (6점) *습습*",
     "question_image": "assets/questions/p033_i004_q128.png",
     "answer_image": "assets/answers/p033_i004_q128.png"
   },
@@ -1011,7 +1011,7 @@ window.QUIZ_CARDS = [
     "id": "p034_i001_q128",
     "page": 34,
     "question_number": 128,
-    "question_text": "128. 컴퓨터를 이용한 심리검사의 장단점 각각 2가지씩 쓰시오. (4점)",
+    "question_text": "128. 컴퓨터를 이용한 심리검사의 장단점 각각 2가지씩 쓰시오. (4점)\n장점",
     "question_image": "assets/questions/p034_i001_q128.png",
     "answer_image": "assets/answers/p034_i001_q128.png"
   },
@@ -1051,7 +1051,7 @@ window.QUIZ_CARDS = [
     "id": "p035_i004_q134",
     "page": 35,
     "question_number": 134,
-    "question_text": "134. 적성검사와 홍미검사의 공통점과 차이점을 설명하시오. (4점)",
+    "question_text": "134. 적성검사와 홍미검사의 공통점과 차이점을 설명하시오. (4점)\n적성검사",
     "question_image": "assets/questions/p035_i004_q134.png",
     "answer_image": "assets/answers/p035_i004_q134.png"
   },
@@ -1059,7 +1059,7 @@ window.QUIZ_CARDS = [
     "id": "p036_i001_q135",
     "page": 36,
     "question_number": 135,
-    "question_text": "135. 다음 신경심리검사들의 인지기능 평가영역을 서술하시오. (2점)",
+    "question_text": "135. 다음 신경심리검사들의 인지기능 평가영역을 서술하시오. (2점)\nContrasting Program. Go-No-Go Test. First-Edge-Palrn. Korean-Color Word Stroop Test(K-CWST)",
     "question_image": "assets/questions/p036_i001_q135.png",
     "answer_image": "assets/answers/p036_i001_q135.png"
   },
@@ -1067,7 +1067,7 @@ window.QUIZ_CARDS = [
     "id": "p036_i002_q136",
     "page": 36,
     "question_number": 136,
-    "question_text": "136. 다음 사례를 읽고 물음에 답하시오. (6점)",
+    "question_text": "136. 다음 사례를 읽고 물음에 답하시오. (6점)\n뇌졸중 환자에게 반구손상이 있음을 확인하였고 손상여부를 알아보기 위해 굴자 지우기 검사를 실시하였다.",
     "question_image": "assets/questions/p036_i002_q136.png",
     "answer_image": "assets/answers/p036_i002_q136.png"
   },
@@ -1083,7 +1083,7 @@ window.QUIZ_CARDS = [
     "id": "p036_i004_q138",
     "page": 36,
     "question_number": 138,
-    "question_text": "138. 신경심리검사 중 시공간 영역 즉정시 사용하는 검사 5가지를 쓰시오. (5점)",
+    "question_text": "138. 신경심리검사 중 시공간 영역 즉정시 사용하는 검사 5가지를 쓰시오. (5점)\n0 웩술러 지능검사-토막짜기 레이 복합도형 검사 벤더 게슈탈트 검사(BGT)",
     "question_image": "assets/questions/p036_i004_q138.png",
     "answer_image": "assets/answers/p036_i004_q138.png"
   },
@@ -1091,7 +1091,7 @@ window.QUIZ_CARDS = [
     "id": "p036_i005_q139",
     "page": 36,
     "question_number": 139,
-    "question_text": "139. 풀베터리 검사를 활용하는 이유와 구성 예시를 쓰시오. (5점) **",
+    "question_text": "139. 풀베터리 검사를 활용하는 이유와 구성 예시를 쓰시오. (5점) **\n1) 이유",
     "question_image": "assets/questions/p036_i005_q139.png",
     "answer_image": "assets/answers/p036_i005_q139.png"
   },
@@ -1115,7 +1115,7 @@ window.QUIZ_CARDS = [
     "id": "p037_i002_q142",
     "page": 37,
     "question_number": 142,
-    "question_text": "142. 엑스너(Exner) 종합체계방식의 주요 재점(기호화) 항목 5가지를 기술하시오. (5정)\n# 로샤검사에서 질문을 통해 탐색해야 할 내용3가지를 쓰시오. (3점)\n4월 반유역역 (기 결적요9| 혁대죟 (平 반목내용 쌍반용",
+    "question_text": "142. 엑스너(Exner) 종합체계방식의 주요 재점(기호화) 항목 5가지를 기술하시오. (5정)",
     "question_image": "assets/questions/p037_i002_q142.png",
     "answer_image": "assets/answers/p037_i002_q142.png"
   },
@@ -1155,7 +1155,7 @@ window.QUIZ_CARDS = [
     "id": "p038_i002_q147",
     "page": 38,
     "question_number": 147,
-    "question_text": "147. 지능을 평가할 때 주요생점으로 임상적 접근과 개념적 접근에 대해 셜명하시오. (6점)",
+    "question_text": "147. 지능을 평가할 때 주요생점으로 임상적 접근과 개념적 접근에 대해 셜명하시오. (6점)\n임상적 접근",
     "question_image": "assets/questions/p038_i002_q147.png",
     "answer_image": "assets/answers/p038_i002_q147.png"
   },
@@ -1163,7 +1163,7 @@ window.QUIZ_CARDS = [
     "id": "p038_i003_q148",
     "page": 38,
     "question_number": 148,
-    "question_text": "148. 웩술러 지능검사의 양적분석(점수, 숫자)에 포함되어야 할 내용을 3~5가지 쓰시오. (6점) *\n# K-WAIS-IV의 양적 분석 포함 내용 4가지\n# WAIS-IV 연속적인 수준의 해석 5단계 (5점)",
+    "question_text": "148. 웩술러 지능검사의 양적분석(점수, 숫자)에 포함되어야 할 내용을 3~5가지 쓰시오. (6점) *",
     "question_image": "assets/questions/p038_i003_q148.png",
     "answer_image": "assets/answers/p038_i003_q148.png"
   },
@@ -1227,7 +1227,7 @@ window.QUIZ_CARDS = [
     "id": "p040_i004_q157",
     "page": 40,
     "question_number": 157,
-    "question_text": "157. K-WAIS 혁심 소검사 항목 11가지와 측정 내용을 쓰시오.\n# 획술러지능검사(K-W시S)의 소검사 측정 측면(이유) 5가지를 쓰시오.\n# 력술러지능검사(K-W시S)의 소검사 기본지식의 측정내용 5가지를 쓰시오.\n# 웩술러지능검사(K-W시S)의 소검사 이해의 측정내용을 쓰시오.",
+    "question_text": "157. K-WAIS 혁심 소검사 항목 11가지와 측정 내용을 쓰시오.",
     "question_image": "assets/questions/p040_i004_q157.png",
     "answer_image": "assets/answers/p040_i004_q157.png"
   },
@@ -1235,7 +1235,7 @@ window.QUIZ_CARDS = [
     "id": "p041_i001_q158",
     "page": 41,
     "question_number": 158,
-    "question_text": "158. K-WAIS-IV의 5가지 주요 지수(지표)를 쓰고. 각각에 대해 설명하시오. **\n# K-WAIS-IV.의 4가지 지표와 각 지표법 소검사를 1개씩 쓰시오.\n※ K-WISC 소검사 설명 • WISC-V로 변경되었지만 자격시험에는 WISC-IV가 계속 나오고 있음",
+    "question_text": "158. K-WAIS-IV의 5가지 주요 지수(지표)를 쓰고. 각각에 대해 설명하시오. **",
     "question_image": "assets/questions/p041_i001_q158.png",
     "answer_image": "assets/answers/p041_i001_q158.png"
   },
@@ -1291,7 +1291,7 @@ window.QUIZ_CARDS = [
     "id": "p043_i003_q166",
     "page": 43,
     "question_number": 166,
-    "question_text": "166. MMPI의 쓰고 각각에 대해 설명하시오. (4점)",
+    "question_text": "166. MMPI의 쓰고 각각에 대해 설명하시오. (4점)\n무응답(?)",
     "question_image": "assets/questions/p043_i003_q166.png",
     "answer_image": "assets/answers/p043_i003_q166.png"
   },
@@ -1323,7 +1323,7 @@ window.QUIZ_CARDS = [
     "id": "p044_i004_q171",
     "page": 44,
     "question_number": 171,
-    "question_text": "171. MMPI 프로파일 해석과 관련하여 긍정왜곡과 부정왜곡의 의미와 적도 양상을 설명하시오. (4점)",
+    "question_text": "171. MMPI 프로파일 해석과 관련하여 긍정왜곡과 부정왜곡의 의미와 적도 양상을 설명하시오. (4점)\n긍정 희곡 / V형 = Faking 卯0d(축소)",
     "question_image": "assets/questions/p044_i004_q171.png",
     "answer_image": "assets/answers/p044_i004_q171.png"
   },
@@ -1347,7 +1347,7 @@ window.QUIZ_CARDS = [
     "id": "p045_i002_q175",
     "page": 45,
     "question_number": 175,
-    "question_text": "175. 다음 사례를 읽고 물음에 답하시오. (6점)",
+    "question_text": "175. 다음 사례를 읽고 물음에 답하시오. (6점)\nA씨는 만 24세로 군 입대를 앞두고 병사용 진단서를 발급받기 위해 병사 진단용 검사를 의회하였다. MMPI 검사 결",
     "question_image": "assets/questions/p045_i002_q175.png",
     "answer_image": "assets/answers/p045_i002_q175.png"
   },
@@ -1355,7 +1355,7 @@ window.QUIZ_CARDS = [
     "id": "p045_i003_q176",
     "page": 45,
     "question_number": 176,
-    "question_text": "176. MMPI-2 결과. 20대 남성 타당도적도. 임상석도 코드유형, 설명하시오. (8점)",
+    "question_text": "176. MMPI-2 결과. 20대 남성 타당도적도. 임상석도 코드유형, 설명하시오. (8점)\n타당도 프로파일",
     "question_image": "assets/questions/p045_i003_q176.png",
     "answer_image": "assets/answers/p045_i003_q176.png"
   },
@@ -1411,7 +1411,7 @@ window.QUIZ_CARDS = [
     "id": "p048_i002_q186",
     "page": 48,
     "question_number": 186,
-    "question_text": "186. 정신장매의 쥐약성-스트레스 모일에 대해 신명하시오. (2점) 습습습\n# 정신장에의 취약성-스트레스 모일에서 개인의 취약성에 해당하는 정신장애 발생 원인을 2가지 쓰시외 예정)",
+    "question_text": "186. 정신장매의 쥐약성-스트레스 모일에 대해 신명하시오. (2점) 습습습",
     "question_image": "assets/questions/p048_i002_q186.png",
     "answer_image": "assets/answers/p048_i002_q186.png"
   },
@@ -1419,7 +1419,7 @@ window.QUIZ_CARDS = [
     "id": "p048_i003_q187",
     "page": 48,
     "question_number": 187,
-    "question_text": "187. 다음 보기의 사례를 읽고 물음에 답하시오. (10점)\n# 우을삽화의 진단 기준에서 주요 우울증상 3가지. 자살상담에서 자살 위험도에 대한 평가 2가지와",
+    "question_text": "187. 다음 보기의 사례를 읽고 물음에 답하시오. (10점)",
     "question_image": "assets/questions/p048_i003_q187.png",
     "answer_image": "assets/answers/p048_i003_q187.png"
   },
@@ -1427,7 +1427,7 @@ window.QUIZ_CARDS = [
     "id": "p049_i001_q188",
     "page": 49,
     "question_number": 188,
-    "question_text": "188. 다음 사례를 읽고 검사결과를 토대로 해석을 쓰시오.(6점)\n# 보기에서 내담자의 정신장에 및 감별진단을 요하는 정신장0H 유형을 제시하고. 각각 장애에 대한 임",
+    "question_text": "188. 다음 사례를 읽고 검사결과를 토대로 해석을 쓰시오.(6점)",
     "question_image": "assets/questions/p049_i001_q188.png",
     "answer_image": "assets/answers/p049_i001_q188.png"
   },
@@ -1475,7 +1475,7 @@ window.QUIZ_CARDS = [
     "id": "p050_i003_q195",
     "page": 50,
     "question_number": 195,
-    "question_text": "195. 기능성 기억장애와 기질성 기억장애의 예를 1가지씩 쓰고 차이점을 설명하시오. (6점)",
+    "question_text": "195. 기능성 기억장애와 기질성 기억장애의 예를 1가지씩 쓰고 차이점을 설명하시오. (6점)\n자이",
     "question_image": "assets/questions/p050_i003_q195.png",
     "answer_image": "assets/answers/p050_i003_q195.png"
   },
@@ -1523,7 +1523,7 @@ window.QUIZ_CARDS = [
     "id": "p052_i003_q202",
     "page": 52,
     "question_number": 202,
-    "question_text": "202. 보기의 사례를 읽고 물음에 답하시오. (5점) *슛",
+    "question_text": "202. 보기의 사례를 읽고 물음에 답하시오. (5점) *슛\n을해 10세 초등 3학년 A군. 부모나 또래진구들과의 사회적 관계에서 문제 증상 보임. A군의 부모는 A군이 부모인",
     "question_image": "assets/questions/p052_i003_q202.png",
     "answer_image": "assets/answers/p052_i003_q202.png"
   }
