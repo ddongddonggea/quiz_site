@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>임상심리사 2급 랜덤 퀴즈</title>
+  <style>
+    :root {
+      --ink: #1f2937;
+      --sub: #6b7280;
+      --line: #eadfce;
+      --card: rgba(255, 253, 248, 0.96);
+      --accent: #9a6700;
+      --accent-soft: #fff2bf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(180deg, #f8f2e7 0%, #f3ebdd 100%);
+    }
+
+    .wrap {
+      width: min(1000px, calc(100% - 28px));
+      margin: 32px auto;
+    }
+
+    .hero, .panel, .empty {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 18px 46px rgba(115, 77, 14, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero {
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--sub);
+      line-height: 1.65;
+    }
+
+    .stats {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .badge, .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .chip {
+      background: #fff7db;
+      border: 1px solid #f6d587;
+      color: var(--accent);
+    }
+
+    .image-frame {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.16s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    .primary {
+      background: #111827;
+      color: white;
+    }
+
+    .secondary {
+      background: #efe3ca;
+      color: #5b4636;
+    }
+
+    .answer {
+      display: none;
+      padding-top: 8px;
+    }
+
+    .answer.visible {
+      display: block;
+    }
+
+    .hint {
+      margin: 14px 0 0;
+      color: var(--sub);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .empty {
+      padding: 28px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100%, calc(100% - 16px));
+        margin: 16px auto;
+      }
+
+      .hero, .panel, .empty {
+        border-radius: 20px;
+      }
+
+      .hero, .panel, .empty {
+        padding: 18px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>임상심리사 2급 랜덤 퀴즈</h1>
+      <p>문제는 원본 이미지 그대로 보여주고, 아래 영역은 가려둡니다. 혼자 먼저 풀어본 뒤 <strong>답 확인하기</strong>를 누르면 같은 카드의 정답 부분이 펼쳐집니다.</p>
+      <div class="stats">
+        <div class="badge">총 문항 <span id="total-count">0</span>개</div>
+        <div class="badge">랜덤 출제</div>
+        <div class="badge">정답 토글</div>
+      </div>
+    </section>
+
+    <section class="panel" id="quiz-panel" hidden>
+      <div class="panel-top">
+        <div class="chip" id="card-label"></div>
+        <div class="chip" id="progress-label">준비 완료</div>
+      </div>
+
+      <div class="image-frame">
+        <img id="question-image" alt="문제 이미지">
+      </div>
+
+      <div class="controls">
+        <button class="primary" id="reveal-btn">답 확인하기</button>
+        <button class="secondary" id="next-btn">다음 문제</button>
+      </div>
+
+      <div class="answer" id="answer-box">
+        <div class="image-frame">
+          <img id="answer-image" alt="정답 이미지">
+        </div>
+      </div>
+
+      <p class="hint" id="question-text"></p>
+    </section>
+
+    <section class="empty" id="empty-panel" hidden>
+      카드 데이터가 없습니다. 먼저 배포용 사이트를 다시 생성해 주세요.
+    </section>
+  </div>
+
+  <script src="quiz-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
