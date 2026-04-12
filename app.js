@@ -11,6 +11,7 @@
   const questionText = document.getElementById("question-text");
   const answerBox = document.getElementById("answer-box");
   const revealBtn = document.getElementById("reveal-btn");
+  const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
   totalCount.textContent = String(cards.length);
@@ -24,6 +25,8 @@
 
   let currentIndex = -1;
   let viewedCount = 0;
+  const history = [];
+  let historyCursor = -1;
 
   function pickRandomIndex() {
     if (cards.length <= 1) {
@@ -37,17 +40,32 @@
     return next;
   }
 
-  function renderCard(index) {
+  function updatePrevButton() {
+    prevBtn.disabled = historyCursor <= 0;
+  }
+
+  function renderCard(index, options) {
     const card = cards[index];
+    const fromHistory = options && options.fromHistory;
     currentIndex = index;
-    viewedCount += 1;
+
+    if (!fromHistory) {
+      if (historyCursor < history.length - 1) {
+        history.splice(historyCursor + 1);
+      }
+      history.push(index);
+      historyCursor = history.length - 1;
+      viewedCount += 1;
+    }
+
     cardLabel.textContent = `페이지 ${card.page} / 문제 ${card.question_number}`;
-    progressLabel.textContent = `${viewedCount}번째로 본 카드`;
+    progressLabel.textContent = `${historyCursor + 1}번째 카드`;
     questionImage.src = card.question_image;
     answerImage.src = card.answer_image;
     questionText.textContent = card.question_text || "";
     answerBox.classList.remove("visible");
     revealBtn.textContent = "답 확인하기";
+    updatePrevButton();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -56,9 +74,17 @@
     revealBtn.textContent = "답 확인됨";
   });
 
-  nextBtn.addEventListener("click", function () {
-    renderCard(pickRandomIndex());
+  prevBtn.addEventListener("click", function () {
+    if (historyCursor <= 0) {
+      return;
+    }
+    historyCursor -= 1;
+    renderCard(history[historyCursor], { fromHistory: true });
   });
 
-  renderCard(pickRandomIndex());
+  nextBtn.addEventListener("click", function () {
+    renderCard(pickRandomIndex(), { fromHistory: false });
+  });
+
+  renderCard(pickRandomIndex(), { fromHistory: false });
 })();
