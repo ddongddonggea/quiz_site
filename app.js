@@ -1,7 +1,7 @@
 (function () {
   const cards = Array.isArray(window.QUIZ_CARDS) ? window.QUIZ_CARDS : [];
-  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v3";
-  const PROGRESS_KEY = "clinical_quiz_viewed_order_v3";
+  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v4";
+  const PROGRESS_KEY = "clinical_quiz_viewed_order_v4";
 
   const totalCount = document.getElementById("total-count");
   const wrongCount = document.getElementById("wrong-count");
@@ -120,7 +120,7 @@
     markCorrectBtn.disabled = !saved;
   }
 
-  function buildQuestionButton(label, className, onClick) {
+  function buildButton(label, className, onClick) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = className;
@@ -138,17 +138,14 @@
       if (!card) {
         return;
       }
-      const item = document.createElement("div");
-      item.className = "list-item";
-      item.appendChild(
-        buildQuestionButton(`문제 ${card.question_number}`, "list-link", function () {
+      viewedList.appendChild(
+        buildButton(String(card.question_number), "mini-chip", function () {
           const index = getCardIndexById(cardId);
           if (index >= 0) {
             renderCard(index, { fromHistory: false, preserveProgress: true });
           }
         })
       );
-      viewedList.appendChild(item);
     });
   }
 
@@ -168,16 +165,18 @@
       item.className = "list-item list-item-split";
 
       item.appendChild(
-        buildQuestionButton(`문제 ${card.question_number}`, "list-link", function () {
+        buildButton(`문제 ${card.question_number}`, "list-link", function () {
           const index = getCardIndexById(card.id);
           if (index >= 0) {
             renderCard(index, { fromHistory: false, preserveProgress: true });
           }
+          wrongListPanel.hidden = true;
+          wrongToggleBtn.textContent = "오답노트 보기";
         })
       );
 
       item.appendChild(
-        buildQuestionButton("삭제", "list-remove", function () {
+        buildButton("삭제", "list-remove", function () {
           wrongIds.delete(card.id);
           persistWrongIds();
           updateCounts();
@@ -288,6 +287,8 @@
     viewedSet = new Set();
     history.length = 0;
     historyCursor = -1;
+    wrongListPanel.hidden = true;
+    wrongToggleBtn.textContent = "오답노트 보기";
     window.localStorage.removeItem(PROGRESS_KEY);
     updateCounts();
     updatePrevButton();
@@ -335,26 +336,20 @@
     saveAsCorrect();
   });
 
-  allModeBtn.addEventListener("click", function () {
-    wrongListPanel.hidden = true;
-    allModeBtn.disabled = true;
-    wrongToggleBtn.disabled = false;
-  });
-
   wrongToggleBtn.addEventListener("click", function () {
-    wrongListPanel.hidden = false;
-    allModeBtn.disabled = false;
-    wrongToggleBtn.disabled = true;
+    const nextHidden = !wrongListPanel.hidden;
+    wrongListPanel.hidden = nextHidden;
+    wrongToggleBtn.textContent = nextHidden ? "오답노트 보기" : "오답노트 닫기";
     renderWrongList();
-    wrongListPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!nextHidden) {
+      wrongListPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 
   updateCounts();
   renderViewedList();
   renderWrongList();
   updateCompletionState();
-  allModeBtn.disabled = true;
-  wrongToggleBtn.disabled = false;
 
   if (viewedOrder.length < cards.length) {
     const nextIndex = getNextUnseenIndex();
