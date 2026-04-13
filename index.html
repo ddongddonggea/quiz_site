@@ -114,6 +114,13 @@
       margin: 18px 0;
     }
 
+    .sub-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 10px 0 18px;
+    }
+
     button {
       border: 0;
       border-radius: 14px;
@@ -142,6 +149,16 @@
     .secondary {
       background: #efe3ca;
       color: #5b4636;
+    }
+
+    .danger {
+      background: #b91c1c;
+      color: white;
+    }
+
+    .success {
+      background: #166534;
+      color: white;
     }
 
     .answer {
@@ -192,6 +209,7 @@
       <p>문제는 원본 이미지 그대로 보여주고, 아래 영역은 가려둡니다. 혼자 먼저 풀어본 뒤 <strong>답 확인하기</strong>를 누르면 같은 카드의 정답 부분이 펼쳐집니다.</p>
       <div class="stats">
         <div class="badge">총 문항 <span id="total-count">0</span>개</div>
+        <div class="badge">오답노트 <span id="wrong-count">0</span>개</div>
         <div class="badge">랜덤 출제</div>
         <div class="badge">정답 토글</div>
       </div>
@@ -201,6 +219,12 @@
       <div class="panel-top">
         <div class="chip" id="card-label"></div>
         <div class="chip" id="progress-label">준비 완료</div>
+        <div class="chip" id="mode-label">전체 문제 보는 중</div>
+      </div>
+
+      <div class="sub-controls">
+        <button class="secondary" id="all-mode-btn">전체 문제</button>
+        <button class="secondary" id="wrong-mode-btn">오답노트</button>
       </div>
 
       <div class="image-frame">
@@ -217,6 +241,11 @@
         <div class="image-frame">
           <img id="answer-image" alt="정답 이미지">
         </div>
+        <div class="controls">
+          <button class="success" id="mark-correct-btn">O 정답 처리</button>
+          <button class="danger" id="mark-wrong-btn">X 오답노트 저장</button>
+        </div>
+        <p class="hint" id="save-status"></p>
       </div>
 
       <p class="hint" id="question-text"></p>
@@ -227,7 +256,7 @@
     </section>
   </div>
 
-  <script src="quiz-data.js?v=2"></script>
-  <script src="app.js?v=2"></script>
+  <script src="quiz-data.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
