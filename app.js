@@ -1,6 +1,6 @@
 (function () {
   const cards = Array.isArray(window.QUIZ_CARDS) ? window.QUIZ_CARDS : [];
-  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v1";
+  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v2";
 
   const totalCount = document.getElementById("total-count");
   const wrongCount = document.getElementById("wrong-count");
@@ -8,7 +8,6 @@
   const emptyPanel = document.getElementById("empty-panel");
   const cardLabel = document.getElementById("card-label");
   const progressLabel = document.getElementById("progress-label");
-  const modeLabel = document.getElementById("mode-label");
   const questionImage = document.getElementById("question-image");
   const answerImage = document.getElementById("answer-image");
   const questionText = document.getElementById("question-text");
@@ -20,6 +19,9 @@
   const markWrongBtn = document.getElementById("mark-wrong-btn");
   const allModeBtn = document.getElementById("all-mode-btn");
   const wrongModeBtn = document.getElementById("wrong-mode-btn");
+  const wrongListPanel = document.getElementById("wrong-list-panel");
+  const wrongList = document.getElementById("wrong-list");
+  const wrongListEmpty = document.getElementById("wrong-list-empty");
   const saveStatus = document.getElementById("save-status");
 
   totalCount.textContent = String(cards.length);
@@ -32,7 +34,6 @@
   quizPanel.hidden = false;
 
   let currentIndex = -1;
-  let currentMode = "all";
   const history = [];
   let historyCursor = -1;
   let wrongIds = loadWrongIds();
@@ -51,45 +52,24 @@
     window.localStorage.setItem(WRONG_NOTE_KEY, JSON.stringify(Array.from(wrongIds)));
   }
 
+  function getCardById(cardId) {
+    return cards.find(function (card) {
+      return card.id === cardId;
+    });
+  }
+
+  function getCardIndexById(cardId) {
+    return cards.findIndex(function (card) {
+      return card.id === cardId;
+    });
+  }
+
   function updateCounts() {
     wrongCount.textContent = String(wrongIds.size);
   }
 
-  function getCurrentPool() {
-    if (currentMode === "wrong") {
-      return cards
-        .map(function (card, index) { return { card: card, index: index }; })
-        .filter(function (item) { return wrongIds.has(item.card.id); })
-        .map(function (item) { return item.index; });
-    }
-    return cards.map(function (_, index) { return index; });
-  }
-
-  function pickRandomIndex() {
-    const pool = getCurrentPool();
-    if (!pool.length) {
-      return -1;
-    }
-    if (pool.length === 1) {
-      return pool[0];
-    }
-
-    let next = currentIndex;
-    while (next === currentIndex || pool.indexOf(next) === -1) {
-      next = pool[Math.floor(Math.random() * pool.length)];
-    }
-    return next;
-  }
-
   function updatePrevButton() {
     prevBtn.disabled = historyCursor <= 0;
-  }
-
-  function updateModeButtons() {
-    const inWrongMode = currentMode === "wrong";
-    allModeBtn.disabled = !inWrongMode;
-    wrongModeBtn.disabled = inWrongMode;
-    modeLabel.textContent = inWrongMode ? "오답노트 보는 중" : "전체 문제 보는 중";
   }
 
   function updateSaveStatus(card) {
@@ -106,29 +86,70 @@
     markCorrectBtn.disabled = !saved;
   }
 
-  function renderEmptyWrongMode() {
-    currentIndex = -1;
-    cardLabel.textContent = "오답노트 비어 있음";
-    progressLabel.textContent = "X로 체크한 문제가 아직 없습니다";
-    questionImage.removeAttribute("src");
-    answerImage.removeAttribute("src");
-    questionText.textContent = "문제를 풀고 답 확인 후 X 버튼을 누르면 여기에 모입니다.";
-    answerBox.classList.remove("visible");
-    revealBtn.textContent = "답 확인하기";
-    revealBtn.disabled = true;
-    nextBtn.disabled = true;
-    prevBtn.disabled = historyCursor <= 0;
-    markCorrectBtn.disabled = true;
-    markWrongBtn.disabled = true;
-    updateSaveStatus(null);
+  function buildWrongListItem(card) {
+    const item = document.createElement("div");
+    item.className = "wrong-item";
+
+    const title = document.createElement("button");
+    title.className = "wrong-link";
+    title.type = "button";
+    title.textContent = `문제 ${card.question_number}번`;
+    title.addEventListener("click", function () {
+      const index = getCardIndexById(card.id);
+      if (index >= 0) {
+        renderCard(index, { fromHistory: false });
+      }
+    });
+
+    const removeBtn = document.createElement("button");
+    removeBtn.className = "wrong-remove";
+    removeBtn.type = "button";
+    removeBtn.textContent = "삭제";
+    removeBtn.addEventListener("click", function () {
+      wrongIds.delete(card.id);
+      persistWrongIds();
+      updateCounts();
+      renderWrongList();
+      if (currentIndex >= 0 && cards[currentIndex].id === card.id) {
+        updateMarkButtons(cards[currentIndex]);
+        updateSaveStatus(cards[currentIndex]);
+      }
+    });
+
+    item.appendChild(title);
+    item.appendChild(removeBtn);
+    return item;
+  }
+
+  function renderWrongList() {
+    wrongList.innerHTML = "";
+    const wrongCards = Array.from(wrongIds)
+      .map(getCardById)
+      .filter(Boolean)
+      .sort(function (a, b) {
+        return a.question_number - b.question_number;
+      });
+
+    wrongListEmpty.hidden = wrongCards.length > 0;
+
+    wrongCards.forEach(function (card) {
+      wrongList.appendChild(buildWrongListItem(card));
+    });
+  }
+
+  function pickRandomIndex() {
+    if (cards.length <= 1) {
+      return 0;
+    }
+
+    let next = currentIndex;
+    while (next === currentIndex) {
+      next = Math.floor(Math.random() * cards.length);
+    }
+    return next;
   }
 
   function renderCard(index, options) {
-    if (index < 0) {
-      renderEmptyWrongMode();
-      return;
-    }
-
     const card = cards[index];
     const fromHistory = options && options.fromHistory;
     currentIndex = index;
@@ -141,7 +162,7 @@
       historyCursor = history.length - 1;
     }
 
-    cardLabel.textContent = `페이지 ${card.page} / 문제 ${card.question_number}`;
+    cardLabel.textContent = `문제 ${card.question_number}`;
     progressLabel.textContent = `${historyCursor + 1}번째 카드`;
     questionImage.src = card.question_image;
     answerImage.src = card.answer_image;
@@ -156,13 +177,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function moveToMode(mode) {
-    currentMode = mode;
-    updateModeButtons();
-    const next = pickRandomIndex();
-    renderCard(next, { fromHistory: false });
-  }
-
   function saveAsWrong() {
     if (currentIndex < 0) {
       return;
@@ -172,6 +186,7 @@
     updateCounts();
     updateMarkButtons(cards[currentIndex]);
     updateSaveStatus(cards[currentIndex]);
+    renderWrongList();
   }
 
   function saveAsCorrect() {
@@ -181,14 +196,9 @@
     wrongIds.delete(cards[currentIndex].id);
     persistWrongIds();
     updateCounts();
-
-    if (currentMode === "wrong" && !wrongIds.has(cards[currentIndex].id)) {
-      moveToMode("wrong");
-      return;
-    }
-
     updateMarkButtons(cards[currentIndex]);
     updateSaveStatus(cards[currentIndex]);
+    renderWrongList();
   }
 
   revealBtn.addEventListener("click", function () {
@@ -220,14 +230,22 @@
   });
 
   allModeBtn.addEventListener("click", function () {
-    moveToMode("all");
+    wrongListPanel.hidden = true;
+    allModeBtn.disabled = true;
+    wrongModeBtn.disabled = false;
   });
 
   wrongModeBtn.addEventListener("click", function () {
-    moveToMode("wrong");
+    wrongListPanel.hidden = false;
+    allModeBtn.disabled = false;
+    wrongModeBtn.disabled = true;
+    renderWrongList();
+    wrongListPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   updateCounts();
-  updateModeButtons();
+  renderWrongList();
+  allModeBtn.disabled = true;
+  wrongModeBtn.disabled = false;
   renderCard(pickRandomIndex(), { fromHistory: false });
 })();
