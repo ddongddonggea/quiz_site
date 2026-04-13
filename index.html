@@ -9,33 +9,37 @@
       --ink: #1f2937;
       --sub: #6b7280;
       --line: #eadfce;
-      --card: rgba(255, 253, 248, 0.96);
+      --card: rgba(255, 251, 244, 0.92);
       --accent: #9a6700;
-      --accent-soft: #fff2bf;
+      --accent-soft: rgba(255, 242, 191, 0.95);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       color: var(--ink);
       font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(245, 158, 11, 0.18), transparent 28%),
-        linear-gradient(180deg, #f8f2e7 0%, #f3ebdd 100%);
+        linear-gradient(rgba(248, 242, 231, 0.72), rgba(243, 235, 221, 0.78)),
+        url("https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1800&q=80") center/cover fixed;
     }
 
     .wrap {
-      width: min(960px, calc(100% - 24px));
-      margin: 24px auto 40px;
+      width: min(980px, calc(100% - 24px));
+      margin: 22px auto 40px;
     }
 
-    .hero, .panel, .empty {
+    .hero,
+    .panel,
+    .empty {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 24px;
-      box-shadow: 0 18px 46px rgba(115, 77, 14, 0.08);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 18px 46px rgba(115, 77, 14, 0.1);
+      backdrop-filter: blur(10px);
     }
 
     .hero {
@@ -62,7 +66,8 @@
       margin-top: 16px;
     }
 
-    .badge, .chip {
+    .badge,
+    .chip {
       display: inline-flex;
       align-items: center;
       padding: 8px 13px;
@@ -108,7 +113,8 @@
       height: auto;
     }
 
-    .controls, .sub-controls {
+    .controls,
+    .sub-controls {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
@@ -129,7 +135,7 @@
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
-      transition: transform 0.16s ease;
+      transition: transform 0.16s ease, opacity 0.16s ease;
     }
 
     button:hover {
@@ -190,20 +196,24 @@
       gap: 10px;
     }
 
-    .list-link, .list-remove, .mini-chip {
+    .list-link,
+    .list-remove,
+    .mini-chip {
       padding: 10px 12px;
     }
 
-    .list-link, .mini-chip {
+    .list-link,
+    .mini-chip {
       background: #fff7db;
       color: #7c4a05;
       text-align: left;
     }
 
     .mini-chip {
-      min-width: 54px;
+      min-width: 48px;
       text-align: center;
       border-radius: 999px;
+      padding: 8px 10px;
     }
 
     .list-remove {
@@ -223,11 +233,15 @@
         margin: 14px auto 28px;
       }
 
-      .hero, .panel, .empty {
+      .hero,
+      .panel,
+      .empty {
         border-radius: 20px;
       }
 
-      .hero, .panel, .empty {
+      .hero,
+      .panel,
+      .empty {
         padding: 16px;
       }
 
@@ -241,10 +255,6 @@
 
       .list-remove {
         width: 100%;
-      }
-
-      .mini-chip {
-        width: auto;
       }
     }
   </style>
@@ -264,6 +274,7 @@
     <section class="panel">
       <div class="panel-top">
         <div class="chip">지금까지 푼 문제</div>
+        <button class="secondary" id="reset-btn">처음부터 다시</button>
       </div>
       <p class="hint" id="viewed-empty">아직 본 문제가 없습니다.</p>
       <div class="mini-chip-row" id="viewed-list"></div>
@@ -277,7 +288,6 @@
 
       <div class="sub-controls">
         <button class="secondary" id="wrong-toggle-btn">오답노트 보기</button>
-        <button class="secondary" id="reset-btn">처음부터 다시</button>
       </div>
 
       <div class="image-frame">
@@ -324,7 +334,7 @@
     </section>
   </div>
 
-  <script src="quiz-data.js?v=7"></script>
-  <script src="app.js?v=7"></script>
+  <script src="quiz-data.js?v=8"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>

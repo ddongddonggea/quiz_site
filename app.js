@@ -1,7 +1,7 @@
 (function () {
   const cards = Array.isArray(window.QUIZ_CARDS) ? window.QUIZ_CARDS : [];
-  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v4";
-  const PROGRESS_KEY = "clinical_quiz_viewed_order_v4";
+  const WRONG_NOTE_KEY = "clinical_quiz_wrong_note_ids_v5";
+  const PROGRESS_KEY = "clinical_quiz_viewed_order_v5";
 
   const totalCount = document.getElementById("total-count");
   const wrongCount = document.getElementById("wrong-count");
@@ -162,10 +162,10 @@
 
     wrongCards.forEach(function (card) {
       const item = document.createElement("div");
-      item.className = "list-item list-item-split";
+      item.className = "list-item-split";
 
       item.appendChild(
-        buildButton(`문제 ${card.question_number}`, "list-link", function () {
+        buildButton("문제 " + card.question_number, "list-link", function () {
           const index = getCardIndexById(card.id);
           if (index >= 0) {
             renderCard(index, { fromHistory: false, preserveProgress: true });
@@ -196,7 +196,7 @@
     const done = viewedOrder.length >= cards.length;
     completionPanel.hidden = !done;
     if (done) {
-      completionText.textContent = `총 ${cards.length}문제를 모두 풀었습니다. 초기화하면 처음부터 다시 시작할 수 있습니다.`;
+      completionText.textContent = "총 " + cards.length + "문제를 모두 풀었습니다. 초기화하면 처음부터 다시 시작할 수 있습니다.";
     }
   }
 
@@ -243,8 +243,8 @@
       registerViewed(card.id);
     }
 
-    cardLabel.textContent = `문제 ${card.question_number}`;
-    progressLabel.textContent = `${viewedOrder.length} / ${cards.length} 풂`;
+    cardLabel.textContent = "문제 " + card.question_number;
+    progressLabel.textContent = viewedOrder.length + " / " + cards.length;
     questionImage.src = card.question_image;
     answerImage.src = card.answer_image;
     questionText.textContent = card.question_text || "";
@@ -337,11 +337,11 @@
   });
 
   wrongToggleBtn.addEventListener("click", function () {
-    const nextHidden = !wrongListPanel.hidden;
-    wrongListPanel.hidden = nextHidden;
-    wrongToggleBtn.textContent = nextHidden ? "오답노트 보기" : "오답노트 닫기";
+    const willHide = !wrongListPanel.hidden;
+    wrongListPanel.hidden = willHide;
+    wrongToggleBtn.textContent = willHide ? "오답노트 보기" : "오답노트 닫기";
     renderWrongList();
-    if (!nextHidden) {
+    if (!willHide) {
       wrongListPanel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
